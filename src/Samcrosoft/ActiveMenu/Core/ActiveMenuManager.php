@@ -7,6 +7,7 @@
  */
 
 namespace Samcrosoft\ActiveMenu\Core;
+use Illuminate\Routing\Router;
 
 /**
  * Class ActiveMenuManager
@@ -14,11 +15,39 @@ namespace Samcrosoft\ActiveMenu\Core;
  */
 class ActiveMenuManager {
 
+    use ActiveMenuRouteTraits;
+
     /**
      * @staticvar string
      * @const
      */
     const PARAM_SEPARATOR = "|";
+
+    /**
+     * This will inject the current router class by using Dependency Injection
+     * @param Router $oRouter
+     */
+    function __construct(Router $oRouter){
+        $this->setRouterObject($oRouter);
+    }
+
+    /**
+     * @return Router|null
+     */
+    public function getRouterObject()
+    {
+        return $this->oRouterObject;
+    }
+
+    /**
+     * @param Router|null $oRouterObject
+     */
+    public function setRouterObject($oRouterObject)
+    {
+        $this->oRouterObject = $oRouterObject;
+    }
+
+
 
     /**
      * @param string $sRouteClassParam

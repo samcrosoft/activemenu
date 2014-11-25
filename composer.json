@@ -16,7 +16,7 @@
             "src/migrations"
         ],
         "psr-0": {
-            "Samcrosoft\\Activemenu\\": "src/"
+            "Samcrosoft\\ActiveMenu\\": "src/"
         }
     },
     "minimum-stability": "stable"

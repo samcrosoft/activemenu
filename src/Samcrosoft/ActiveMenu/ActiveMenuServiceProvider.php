@@ -36,7 +36,7 @@ class ActiveMenuServiceProvider extends ServiceProvider {
 	{
         // bind the active menu object to the IOC container
         $this->app->bind(Facade::FACADE_NAME, function(){
-            return new ActiveMenuManager;
+            return new ActiveMenuManager($this->app['router']);
         });
 	}
 
