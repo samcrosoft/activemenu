@@ -1,6 +1,6 @@
 {
     "name": "samcrosoft/activemenu",
-    "description": "A package that helps to sole the active menu problem - An improvement on the wondeful work done by hieu-le/active",
+    "description": "A package that helps to solve the active menu problem - An improvement on the wonderful work done by hieu-le/active, it is specifically suited for laravel",
     "authors": [
         {
             "name": "Adebola Samuel Olowofela",
